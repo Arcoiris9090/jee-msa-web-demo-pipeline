@@ -103,7 +103,7 @@ stages:
 
               echo "Verificando archivos necesarios para el despliegue "
               for archivo in \
-                helm/build-config.yml \
+                helm/build-config.yaml \
                 helm/dev.yml \
                 helm/service.yaml \
                 helm/route.yaml
