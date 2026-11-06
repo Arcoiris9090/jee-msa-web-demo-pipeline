@@ -99,25 +99,25 @@ stages:
           - checkout: self
           
           - script: |
-             set -e 
+              set -e 
 
-             echo "Verificando archivos necesarios para el despliegue "
-             for archivo in \
-              helm/build-config.yml \
-              helm/dev.yml \
-              helm/service.yaml \
-              helm/route.yaml
-             do
-              if [ ! -s "$archivo" ]; then
-               echo "ERROR : EL ARCHIVO $archivo no existe o esta vacio."
-               exit 1
-              fi
+              echo "Verificando archivos necesarios para el despliegue "
+              for archivo in \
+                helm/build-config.yml \
+                helm/dev.yml \
+                helm/service.yaml \
+                helm/route.yaml
+              do
+                if [ ! -s "$archivo" ]; then
+                  echo "ERROR : EL ARCHIVO $archivo no existe o esta vacio."
+                  exit 1
+                fi
 
-              echo "ok : $archivo"
-            done
+                echo "ok : $archivo"
+              done
 
-            echo "validacion de archivos completada correctamente"
-          displayName: 'Verificar manifiestos'
+              echo "validacion de archivos completada correctamente"
+            displayName: 'Verificar manifiestos'
              
   # ==========================================
   # STAGE 2: APROBACIÓN MANUAL (APPROVAL)
