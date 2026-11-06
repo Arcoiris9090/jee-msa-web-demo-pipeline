@@ -124,7 +124,8 @@ stages:
               oc login --token=$(OPENSHIFT_TOKEN) --server=$(OPENSHIFT_SERVER) --insecure-skip-tls-verify=true
 
               echo "=== 3. Seleccionando Proyecto ==="
-              oc project testing-account-dev
+              oc project arcoiris9090-dev
+
 
               echo "=== 4. Aplicando Manifiestos (Creando BuildConfig y Deployment) ==="
               oc apply -f helm/build-config.yaml
