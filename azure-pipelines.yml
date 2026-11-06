@@ -117,7 +117,7 @@ stages:
             done
 
             echo "validacion de archivos completada correctamente"
-          displayName 'Verificar manifiestos'
+          displayName: 'Verificar manifiestos'
              
   # ==========================================
   # STAGE 2: APROBACIÓN MANUAL (APPROVAL)
